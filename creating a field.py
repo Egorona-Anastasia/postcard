@@ -146,6 +146,9 @@ def main(): # основная функция программы
   colorBtn_8 = button("", 210,
                fieldCellHeight*cellSize + 5, width=2,
                command = button_8, bg = "black")
+  clearBtn = button("Очистить", 240,
+               fieldCellHeight*cellSize + 5, width=10,
+               command = clearField) # кнопка, выполняющая команду очищения поля
   e = edit("Введите пожелание: ", 80, 50, font=("Arial", 10), justify = CENTER)
   print(e.text.get())
   initField() # вызов функции для создания поля из клеток
