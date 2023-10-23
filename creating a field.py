@@ -64,6 +64,31 @@ def mouseLBMove(event): # функция нажатия с передвижен�
 def main(): # основная функция программы
   windowSize(fieldWidth, fieldHeight+35) # размер окна
   canvasSize(fieldWidth, fieldHeight) # размер холста
+  # кнопки, выполняющие команду изменения цвета:
+  colorBtn_1 = button("", 1,
+               fieldCellHeight*cellSize + 5, width=2,
+               command = button_1, bg = "red") 
+  colorBtn_2 = button("", 30,
+               fieldCellHeight*cellSize + 5, width=2,
+               command = button_2, bg = "orange")
+  colorBtn_3 = button("", 60,
+               fieldCellHeight*cellSize + 5, width=2,
+               command = button_3, bg = "yellow")
+  colorBtn_4 = button("", 90,
+               fieldCellHeight*cellSize + 5, width=2,
+               command = button_4, bg = "green")
+  colorBtn_5 = button("", 120,
+               fieldCellHeight*cellSize + 5, width=2,
+               command = button_5, bg = "deep sky blue")
+  colorBtn_6 = button("", 150,
+               fieldCellHeight*cellSize + 5, width=2,
+               command = button_6, bg = "blue")
+  colorBtn_7 = button("", 180,
+               fieldCellHeight*cellSize + 5, width=2,
+               command = button_7, bg = "purple")
+  colorBtn_8 = button("", 210,
+               fieldCellHeight*cellSize + 5, width=2,
+               command = button_8, bg = "black")
   e = edit("Введите пожелание: ", 80, 50, font=("Arial", 10), justify = CENTER)
   print(e.text.get())
   initField() # вызов функции для создания поля из клеток
