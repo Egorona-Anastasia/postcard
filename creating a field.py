@@ -118,6 +118,10 @@ def color(): # функция, возвращающая цвет, которым
     return "purple"
   elif palette == 8:
     return "black"
+
+def clearField(): # функция очищения поля
+  changeField(True)
+
 def main(): # основная функция программы
   windowSize(fieldWidth, fieldHeight+35) # размер окна
   canvasSize(fieldWidth, fieldHeight) # размер холста
