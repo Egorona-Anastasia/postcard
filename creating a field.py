@@ -38,7 +38,7 @@ def changeField(clear = False): # изменение поля; параметр 
 def toggleCell(x, y): # переключение цвета клетки
   field[y][x] = 1 - field[y][x]
   if field[y][x]:
-    changeFillColor(fieldId[y][x], "black" ) # встроенная функция, меняющая цвет клетки
+    changeFillColor(fieldId[y][x], color()) # встроенная функция, меняющая цвет клетки
   else:
     changeFillColor(fieldId[y][x], "white") # встроенная функция, меняющая цвет клетки
 def cellCoords(x, y): # координаты клетки
@@ -60,7 +60,64 @@ def mouseLBMove(event): # функция нажатия с передвижен�
     toggleCell(x, y) # меняется цвет ячейки
     prevCell = (x, y) # меняется предыдущее значение ячейки
   return
+# функции цветовых кнопок, вызывают цвета:
+def button_1():
+  global palette # уникальный номер каждого цвета
+  palette = 1
+  color()
+  
+def button_2():
+  global palette
+  palette = 2
+  color()
 
+def button_3():
+  global palette
+  palette = 3
+  color()
+
+def button_4():
+  global palette
+  palette = 4
+  color()
+
+def button_5():
+  global palette
+  palette = 5
+  color()
+
+def button_6():
+  global palette
+  palette = 6
+  color()
+  
+def button_7():
+  global palette
+  palette = 7
+  color()
+
+def button_8():
+  global palette
+  palette = 8
+  color()
+  
+def color(): # функция, возвращающая цвет, которым будут рисовать
+  if palette == 1:
+    return "red"
+  elif palette == 2:
+    return "orange"
+  elif palette == 3:
+    return "yellow"
+  elif palette == 4:
+    return "green"
+  elif palette == 5:
+    return "deep sky blue"
+  elif palette == 6:
+    return "blue"
+  elif palette == 7:
+    return "purple"
+  elif palette == 8:
+    return "black"
 def main(): # основная функция программы
   windowSize(fieldWidth, fieldHeight+35) # размер окна
   canvasSize(fieldWidth, fieldHeight) # размер холста
