@@ -122,6 +122,25 @@ def color(): # функция, возвращающая цвет, которым
 def clearField(): # функция очищения поля
   changeField(True)
 
+from tkinter import *
+from tkinter import ttk
+from tkinter.messagebox import showerror, showwarning, showinfo
+
+def open_info():
+    tkinter.messagebox.showinfo('Инструкция', '''\
+Привет, пользователь!
+Это инструкция по взаимодействию с программой по созданию собственной открытки.
+Здесь ты можешь самостоятельно ввести надпись и нарисовать изображение разными цветами.
+
+Для создания открытки:
+1. В текстовом поле введите свое пожелание.
+2. Чтобы начать рисовать, выберите цвет и приступайте. 
+3. Если вы хотите удалить цвет с клетки, то нужно повторно нажать на эту клетку.
+4. Чтобы полностью удалить рисунок, нажмите кнопку очистить.''')
+ 
+info_button = ttk.Button(text="Инструкция", command=open_info)
+info_button.pack(anchor=NE, expand=1)
+
 def main(): # основная функция программы
   windowSize(fieldWidth, fieldHeight+35) # размер окна
   canvasSize(fieldWidth, fieldHeight) # размер холста
