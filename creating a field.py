@@ -22,6 +22,8 @@ def initField(): # создание поля из клеток
 def main(): # основная функция программы
   windowSize(fieldWidth, fieldHeight+35) # размер окна
   canvasSize(fieldWidth, fieldHeight) # размер холста
+  e = edit("Введите пожелание: ", 80, 50, font=("Arial", 10), justify = CENTER)
+  print(e.text.get())
   initField() # вызов функции для создания поля из клеток
   run() # запуск
 main() # запуск основной функции программы
